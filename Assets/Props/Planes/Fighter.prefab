@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 4452626816545382971, guid: 34a16e2df8a883a43978c182b2ac809a, type: 3}
   planeColor: {r: 1, g: 0.0047169924, b: 0.0047169924, a: 0}
-  speed: 95.5
+  speed: 106.97
   turnSpeed: 50
 --- !u!54 &222526930006387754
 Rigidbody:

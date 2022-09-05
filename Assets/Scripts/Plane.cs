@@ -2,14 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// ABSTRACTION
 public abstract class Plane : MonoBehaviour
 {
     public GameObject projectilePrefab;
     private Color m_planeColor;
 
     public Color planeColor;
-
-    public const string planeName = "Bomber";
 
     private void Start()
     {
@@ -24,6 +23,7 @@ public abstract class Plane : MonoBehaviour
 
         GameObject projectile = Instantiate(projectilePrefab); // shoot a bullet
         projectile.transform.position = transform.position;
+        projectile.transform.rotation = transform.rotation;
     }
 
     [SerializeField] protected float speed = 10;
@@ -54,7 +54,8 @@ public abstract class Plane : MonoBehaviour
 
     [SerializeField] protected const int DefaultAmmo = 30;
     private int m_ammo = DefaultAmmo;
-
+    
+    // ENCAPSULATION
     public int Ammo {
         get {
             return m_ammo;
@@ -111,7 +112,6 @@ public abstract class Plane : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log(collision);
         if (collision.gameObject.CompareTag("Finish"))
         {
             GameObject menu = GameObject.Find("Menu");

@@ -4,6 +4,7 @@ using UnityEngine;
 
 // a fight has missiles that track the mouse (good enough to have have a special ability)
 // a fighter cannot reload
+// INHERITANCE
 public class Fighter : Plane
 {
     protected new float actionDelay = 0.5f;

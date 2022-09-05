@@ -4,6 +4,7 @@ using UnityEngine;
 
 // a bomber can go up/down like a quadcopter?
 // a bomber cannot reload
+// INHERITANCE
 public class Bomber : Plane
 {
     [SerializeField] const int quadSpeed = 10;
