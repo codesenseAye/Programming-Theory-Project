@@ -117,7 +117,7 @@ public abstract class Plane : MonoBehaviour
             GameObject menu = GameObject.Find("Menu");
             Destroy(gameObject);
 
-            //Menu.Restart();
+            Menu.Restart();
         }
     }
 }
